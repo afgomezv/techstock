@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+    --color-blue-ocean: #2a8bea;
+    --color-blue-ice: #48caed;
+    --color-rose-flora: #f73c5c;
+}
