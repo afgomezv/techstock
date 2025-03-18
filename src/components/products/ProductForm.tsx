@@ -84,7 +84,7 @@ export default function ProductForm() {
             {...register("description", {
               required: "La descripción es requerida",
               minLength: {
-                value: 10,
+                value: 5,
                 message: "La descripción debe tener al menos 10 caracteres",
               },
               maxLength: {
