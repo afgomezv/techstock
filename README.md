@@ -1,54 +1,86 @@
-# React + TypeScript + Vite
+# 📦 TechStock - Gestión de Productos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TechStock es una aplicación web que permite gestionar productos, incluyendo la creación, visualización, filtrado y eliminación de los mismos.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛ **React 19** – Biblioteca para la construcción de interfaces.  
+- 🌍 **Context API + useReducer** – Manejo global del estado de los productos.  
+- 🛣 **React Router Dom** – Manejo de rutas dentro de la aplicación.  
+- 🎣 **React Hook Form** – Manejo eficiente de formularios.  
+- 🎨 **Tailwind CSS** – Estilos rápidos y modulares.  
+- 🔥 **Lucide-react** – Íconos personalizables.  
+- 🔔 **React Toastify** – Notificaciones visuales.  
+- 💾 **LocalStorage** – Persistencia de datos en el navegador.  
+- 🏎 **Vite** – Herramienta de desarrollo rápida.  
 
-## Expanding the ESLint configuration
+## 📌 Características
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ **Gestión de productos** con los siguientes campos:
+- **Código** (number)  
+- **Nombre** (text)  
+- **Descripción** (text)  
+- **Cantidad** (number)  
+- **Fecha de creación** (date)  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+✅ **Visualización y administración**:
+- Lista con todos los productos registrados.  
+- Filtros y ordenamiento por **código, nombre, cantidad y fecha de creación**.  
+- Eliminación de productos con actualización automática.  
+- Persistencia en **localStorage**, evitando la pérdida de datos al recargar la página.  
+
+✅ **Gestión del estado global con Context API y useReducer**:
+- **Context API** permite compartir el estado entre componentes sin prop drilling.  
+- **useReducer** se encarga de manejar las acciones de agregar, eliminar y filtrar productos de manera eficiente.  
+
+## 🛠 Instalación y ejecución
+
+### 1. Clona el repositorio:  
+
+```sh
+git clone https://github.com/afgomezv/techstock.git
+cd techstock
+```
+### 2. Instalar dependencias
+```sh
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 3. Ejecutar en desarrollo
+```sh
+npm run dev
 ```
+
+## 📂 Estructura del proyecto
+
+# 📂 Estructura del Proyecto
+
+```plaintext
+📦 techstock
+ ┣ 📂 src
+ ┃ ┣ 📂 context        # Manejo global del estado con Context API + useReducer
+ ┃ ┣ 📂 components     # Componentes reutilizables (inputs, botones, listas)
+ ┃ ┣ 📂 hooks          # Hooks personalizados (uso de localStorage, lógica compartida)
+ ┃ ┣ 📂 layouts        # Componentes de diseño como Navbar, Sidebar, Footer
+ ┃ ┣ 📂 reducers       # Reducers para gestionar el estado con useReducer
+ ┃ ┣ 📂 types          # Definición de tipos y modelos con TypeScript
+ ┃ ┣ 📂 views          # Páginas principales (Home, Create, List)
+ ┃ ┣ 📜 App.tsx        # Punto de entrada de la app
+ ┃ ┣ 📜 main.tsx       # Renderizado en el DOM
+ ┃ ┗ 📜 styles.css     # Estilos globales con Tailwind
+ ┣ 📜 package.json
+ ┣ 📜 README.md
+ ┗ 📜 tsconfig.json
+```
+
+## 📷 Capturas de pantalla
+
+![Descripción de la imagen](public/img1.png)
+![Descripción de la imagen](public/img2.png)
+
+## 🏗 Mejoras futuras
+- Agregar autenticación para gestionar productos por usuario.
+
+- Implementación de una API backend para sincronización remota.
+
+- Mejoras en la UI/UX.
