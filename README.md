@@ -53,7 +53,6 @@ npm run dev
 
 ## 📂 Estructura del proyecto
 
-# 📂 Estructura del Proyecto
 
 ```plaintext
 📦 techstock
@@ -67,7 +66,7 @@ npm run dev
  ┃ ┣ 📂 views          # Páginas principales (Home, Create, List)
  ┃ ┣ 📜 router.tsx     # Punto de entrada de la app
  ┃ ┣ 📜 main.tsx       # Renderizado en el DOM
- ┃ ┗ 📜 index.css     # Estilos globales con Tailwind
+ ┃ ┗ 📜 index.css      # Estilos globales con Tailwind
  ┣ 📜 package.json
  ┣ 📜 README.md
  ┗ 📜 tsconfig.json
