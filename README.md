@@ -65,9 +65,9 @@ npm run dev
  ┃ ┣ 📂 reducers       # Reducers para gestionar el estado con useReducer
  ┃ ┣ 📂 types          # Definición de tipos y modelos con TypeScript
  ┃ ┣ 📂 views          # Páginas principales (Home, Create, List)
- ┃ ┣ 📜 App.tsx        # Punto de entrada de la app
+ ┃ ┣ 📜 router.tsx     # Punto de entrada de la app
  ┃ ┣ 📜 main.tsx       # Renderizado en el DOM
- ┃ ┗ 📜 styles.css     # Estilos globales con Tailwind
+ ┃ ┗ 📜 index.css     # Estilos globales con Tailwind
  ┣ 📜 package.json
  ┣ 📜 README.md
  ┗ 📜 tsconfig.json
