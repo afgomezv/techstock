@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useProduct } from "../../hook/useProduct";
 import { Product } from "../../types";
 import { Trash2 } from "lucide-react";
+import { toast } from "react-toastify/unstyled";
 
 export default function ProductTable() {
   const { state, dispatch } = useProduct();
@@ -16,6 +17,10 @@ export default function ProductTable() {
     setSortField(field);
     setSortOrder(newOrder);
     dispatch({ type: "sort-products", payload: { field, order: newOrder } });
+  };
+
+  const handleDeleteProduct = (code: Product["code"]) => {
+    dispatch({ type: "delete-product", payload: { code } });
   };
 
   return (
@@ -65,12 +70,7 @@ export default function ProductTable() {
                   <td className="flex justify-center">
                     <button
                       className="p-3 text-red-400 hover:text-red-600 cursor-pointer"
-                      onClick={() =>
-                        dispatch({
-                          type: "delete-product",
-                          payload: { code: product.code },
-                        })
-                      }
+                      onClick={() => handleDeleteProduct(product.code)}
                     >
                       <Trash2 size={20} />
                     </button>

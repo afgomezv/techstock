@@ -85,7 +85,7 @@ export default function ProductForm() {
               required: "La descripción es requerida",
               minLength: {
                 value: 5,
-                message: "La descripción debe tener al menos 10 caracteres",
+                message: "La descripción debe tener al menos 5 caracteres",
               },
               maxLength: {
                 value: 200,
